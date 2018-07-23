@@ -13,12 +13,12 @@
 4. USBASP ATMEGA8A AU 1605.
 
 ##### And this programs and drivers:
-1. Atmel Studio 7 (or other program for writing code for AVR controller).
-2. AvrDude (for broaching AVR controller).
-3. Driver for USBASP.
+1. AvrDude (for firmware of AVR controller).
+2. Driver for USBASP.
+3. Atmel Studio 7 (or other program for writing code for AVR controller if you want to change program code)
 ---
 ##### For assembling you need:
-1. To flash controller:
+1. For firmware of AVR controller:
     * connect ATMEGA2560 to USBASP:
        - on ATMEGA2560: ICSP pins (1-6) ![alt text](https://pp.userapi.com/c846524/v846524467/a7dbc/gJnjHK02TFQ.jpg)
     * put the HEX-file (XIMC_command.hex) to the exact directory (for example: to the OS(C:\\))
