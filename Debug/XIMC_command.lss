@@ -1,0 +1,798 @@
+
+XIMC_command.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  00800200  0000045c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000408  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000045c  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000048c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000050  00000000  00000000  000004cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000012d1  00000000  00000000  0000051c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000d6a  00000000  00000000  000017ed  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000553  00000000  00000000  00002557  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000cc  00000000  00000000  00002aac  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000068a  00000000  00000000  00002b78  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000057c  00000000  00000000  00003202  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000040  00000000  00000000  0000377e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	79 c0       	rjmp	.+242    	; 0xf8 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	77 c0       	rjmp	.+238    	; 0xf8 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	75 c0       	rjmp	.+234    	; 0xf8 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	73 c0       	rjmp	.+230    	; 0xf8 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	71 c0       	rjmp	.+226    	; 0xf8 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	6f c0       	rjmp	.+222    	; 0xf8 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	6d c0       	rjmp	.+218    	; 0xf8 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	6b c0       	rjmp	.+214    	; 0xf8 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	69 c0       	rjmp	.+210    	; 0xf8 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	67 c0       	rjmp	.+206    	; 0xf8 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	65 c0       	rjmp	.+202    	; 0xf8 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	63 c0       	rjmp	.+198    	; 0xf8 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	61 c0       	rjmp	.+194    	; 0xf8 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	5f c0       	rjmp	.+190    	; 0xf8 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	5d c0       	rjmp	.+186    	; 0xf8 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	5b c0       	rjmp	.+182    	; 0xf8 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	59 c0       	rjmp	.+178    	; 0xf8 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	57 c0       	rjmp	.+174    	; 0xf8 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	55 c0       	rjmp	.+170    	; 0xf8 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	53 c0       	rjmp	.+166    	; 0xf8 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	51 c0       	rjmp	.+162    	; 0xf8 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	4f c0       	rjmp	.+158    	; 0xf8 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	4d c0       	rjmp	.+154    	; 0xf8 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	4b c0       	rjmp	.+150    	; 0xf8 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	49 c0       	rjmp	.+146    	; 0xf8 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	47 c0       	rjmp	.+142    	; 0xf8 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	45 c0       	rjmp	.+138    	; 0xf8 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	43 c0       	rjmp	.+134    	; 0xf8 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	41 c0       	rjmp	.+130    	; 0xf8 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	3f c0       	rjmp	.+126    	; 0xf8 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	3d c0       	rjmp	.+122    	; 0xf8 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	3b c0       	rjmp	.+118    	; 0xf8 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	39 c0       	rjmp	.+114    	; 0xf8 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	37 c0       	rjmp	.+110    	; 0xf8 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	35 c0       	rjmp	.+106    	; 0xf8 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	33 c0       	rjmp	.+102    	; 0xf8 <__bad_interrupt>
+  92:	00 00       	nop
+  94:	31 c0       	rjmp	.+98     	; 0xf8 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	2f c0       	rjmp	.+94     	; 0xf8 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	2d c0       	rjmp	.+90     	; 0xf8 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	2b c0       	rjmp	.+86     	; 0xf8 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	29 c0       	rjmp	.+82     	; 0xf8 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	27 c0       	rjmp	.+78     	; 0xf8 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	25 c0       	rjmp	.+74     	; 0xf8 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	23 c0       	rjmp	.+70     	; 0xf8 <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	21 c0       	rjmp	.+66     	; 0xf8 <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	1f c0       	rjmp	.+62     	; 0xf8 <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	1d c0       	rjmp	.+58     	; 0xf8 <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	1b c0       	rjmp	.+54     	; 0xf8 <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	19 c0       	rjmp	.+50     	; 0xf8 <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	17 c0       	rjmp	.+46     	; 0xf8 <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	15 c0       	rjmp	.+42     	; 0xf8 <__bad_interrupt>
+  ce:	00 00       	nop
+  d0:	13 c0       	rjmp	.+38     	; 0xf8 <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	11 c0       	rjmp	.+34     	; 0xf8 <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	0f c0       	rjmp	.+30     	; 0xf8 <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	0d c0       	rjmp	.+26     	; 0xf8 <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	0b c0       	rjmp	.+22     	; 0xf8 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+  f4:	7b d0       	rcall	.+246    	; 0x1ec <main>
+  f6:	86 c1       	rjmp	.+780    	; 0x404 <_exit>
+
+000000f8 <__bad_interrupt>:
+  f8:	83 cf       	rjmp	.-250    	; 0x0 <__vectors>
+
+000000fa <UART0_Transmit>:
+//UART0 receive handler
+unsigned char UART0_Receive(void)
+{
+	while (!(UCSR0A & (1 << RXC0))){}; //waiting for data
+	return UDR0; //receive and return data received
+}
+  fa:	e0 ec       	ldi	r30, 0xC0	; 192
+  fc:	f0 e0       	ldi	r31, 0x00	; 0
+  fe:	90 81       	ld	r25, Z
+ 100:	95 ff       	sbrs	r25, 5
+ 102:	fd cf       	rjmp	.-6      	; 0xfe <UART0_Transmit+0x4>
+ 104:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+ 108:	08 95       	ret
+
+0000010a <UART3_Transmit>:
+ 10a:	e0 e3       	ldi	r30, 0x30	; 48
+ 10c:	f1 e0       	ldi	r31, 0x01	; 1
+ 10e:	90 81       	ld	r25, Z
+ 110:	95 ff       	sbrs	r25, 5
+ 112:	fd cf       	rjmp	.-6      	; 0x10e <UART3_Transmit+0x4>
+ 114:	80 93 36 01 	sts	0x0136, r24	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+ 118:	08 95       	ret
+
+0000011a <UART3_Receive>:
+
+//UART3 receive handler
+unsigned char UART3_Receive(void)
+{
+	while (!(UCSR3A & (1 << RXC3))){}; //waiting for data
+ 11a:	e0 e3       	ldi	r30, 0x30	; 48
+ 11c:	f1 e0       	ldi	r31, 0x01	; 1
+ 11e:	80 81       	ld	r24, Z
+ 120:	88 23       	and	r24, r24
+ 122:	ec f7       	brge	.-6      	; 0x11e <UART3_Receive+0x4>
+	return UDR3; //receive and return data received
+ 124:	80 91 36 01 	lds	r24, 0x0136	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+}
+ 128:	08 95       	ret
+
+0000012a <CRC16>:
+//n - size of buffer
+unsigned short CRC16(uint8_t *pbuf, unsigned short n)
+{
+	unsigned short crc, i, j, carry_flag, a;
+	crc = 0xffff;
+	for (i = 4; i < (n + 4); i++)
+ 12a:	6c 5f       	subi	r22, 0xFC	; 252
+ 12c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 12e:	65 30       	cpi	r22, 0x05	; 5
+ 130:	71 05       	cpc	r23, r1
+ 132:	e8 f0       	brcs	.+58     	; 0x16e <CRC16+0x44>
+ 134:	fc 01       	movw	r30, r24
+ 136:	34 96       	adiw	r30, 0x04	; 4
+ 138:	68 0f       	add	r22, r24
+ 13a:	79 1f       	adc	r23, r25
+ 13c:	8f ef       	ldi	r24, 0xFF	; 255
+ 13e:	9f ef       	ldi	r25, 0xFF	; 255
+	{
+		crc = crc ^ pbuf[i];
+ 140:	21 91       	ld	r18, Z+
+ 142:	82 27       	eor	r24, r18
+ 144:	28 e0       	ldi	r18, 0x08	; 8
+ 146:	30 e0       	ldi	r19, 0x00	; 0
+		for (j = 0; j < 8; j++)
+		{
+			a = crc;
+			carry_flag = a & 0x0001;
+ 148:	ac 01       	movw	r20, r24
+ 14a:	41 70       	andi	r20, 0x01	; 1
+ 14c:	55 27       	eor	r21, r21
+			crc = crc >> 1;
+ 14e:	96 95       	lsr	r25
+ 150:	87 95       	ror	r24
+			if (carry_flag == 1) crc = crc ^ 0xa001;
+ 152:	41 30       	cpi	r20, 0x01	; 1
+ 154:	51 05       	cpc	r21, r1
+ 156:	21 f4       	brne	.+8      	; 0x160 <CRC16+0x36>
+ 158:	41 e0       	ldi	r20, 0x01	; 1
+ 15a:	84 27       	eor	r24, r20
+ 15c:	40 ea       	ldi	r20, 0xA0	; 160
+ 15e:	94 27       	eor	r25, r20
+ 160:	21 50       	subi	r18, 0x01	; 1
+ 162:	31 09       	sbc	r19, r1
+	unsigned short crc, i, j, carry_flag, a;
+	crc = 0xffff;
+	for (i = 4; i < (n + 4); i++)
+	{
+		crc = crc ^ pbuf[i];
+		for (j = 0; j < 8; j++)
+ 164:	89 f7       	brne	.-30     	; 0x148 <CRC16+0x1e>
+//n - size of buffer
+unsigned short CRC16(uint8_t *pbuf, unsigned short n)
+{
+	unsigned short crc, i, j, carry_flag, a;
+	crc = 0xffff;
+	for (i = 4; i < (n + 4); i++)
+ 166:	e6 17       	cp	r30, r22
+ 168:	f7 07       	cpc	r31, r23
+ 16a:	51 f7       	brne	.-44     	; 0x140 <CRC16+0x16>
+ 16c:	08 95       	ret
+//pbuf - buffer of data for calculate
+//n - size of buffer
+unsigned short CRC16(uint8_t *pbuf, unsigned short n)
+{
+	unsigned short crc, i, j, carry_flag, a;
+	crc = 0xffff;
+ 16e:	8f ef       	ldi	r24, 0xFF	; 255
+ 170:	9f ef       	ldi	r25, 0xFF	; 255
+			crc = crc >> 1;
+			if (carry_flag == 1) crc = crc ^ 0xa001;
+		}
+	}
+	return crc;
+}
+ 172:	08 95       	ret
+
+00000174 <Command_Gpos>:
+	}
+}
+
+//Sending the command "gpos" to the UART0 and get answer
+uint8_t * Command_Gpos(struct Request_Gpos gpos, uint8_t *buf_to_read)
+{
+ 174:	af 92       	push	r10
+ 176:	bf 92       	push	r11
+ 178:	cf 92       	push	r12
+ 17a:	df 92       	push	r13
+ 17c:	ef 92       	push	r14
+ 17e:	ff 92       	push	r15
+ 180:	0f 93       	push	r16
+ 182:	1f 93       	push	r17
+ 184:	cf 93       	push	r28
+ 186:	df 93       	push	r29
+ 188:	cd b7       	in	r28, 0x3d	; 61
+ 18a:	de b7       	in	r29, 0x3e	; 62
+ 18c:	c8 a4       	ldd	r12, Y+40	; 0x28
+ 18e:	d9 a4       	ldd	r13, Y+41	; 0x29
+ 190:	8e 01       	movw	r16, r28
+ 192:	02 5f       	subi	r16, 0xF2	; 242
+ 194:	1f 4f       	sbci	r17, 0xFF	; 255
+ 196:	7e 01       	movw	r14, r28
+ 198:	82 e1       	ldi	r24, 0x12	; 18
+ 19a:	e8 0e       	add	r14, r24
+ 19c:	f1 1c       	adc	r15, r1
+	uint8_t *buf_to_send = (uint8_t *)&gpos;
+
+	//transmit command "gpos" (UART3) [4 bytes]
+	for (int i = 0; i < 4; i++)
+	{
+		UART3_Transmit(buf_to_send[i]);
+ 19e:	f8 01       	movw	r30, r16
+ 1a0:	81 91       	ld	r24, Z+
+ 1a2:	8f 01       	movw	r16, r30
+ 1a4:	b2 df       	rcall	.-156    	; 0x10a <UART3_Transmit>
+uint8_t * Command_Gpos(struct Request_Gpos gpos, uint8_t *buf_to_read)
+{
+	uint8_t *buf_to_send = (uint8_t *)&gpos;
+
+	//transmit command "gpos" (UART3) [4 bytes]
+	for (int i = 0; i < 4; i++)
+ 1a6:	0e 15       	cp	r16, r14
+ 1a8:	1f 05       	cpc	r17, r15
+ 1aa:	c9 f7       	brne	.-14     	; 0x19e <Command_Gpos+0x2a>
+ 1ac:	76 01       	movw	r14, r12
+ 1ae:	56 01       	movw	r10, r12
+ 1b0:	fa e1       	ldi	r31, 0x1A	; 26
+ 1b2:	af 0e       	add	r10, r31
+ 1b4:	b1 1c       	adc	r11, r1
+
+	//get the answer (UART3) from XIMC  (struct Request_Gpos [26 bytes])
+	//uint8_t buf_to_read[26];
+	for (int i = 0; i < 26; i++)
+	{
+		buf_to_read[i]=(uint8_t)UART3_Receive();
+ 1b6:	86 01       	movw	r16, r12
+ 1b8:	b0 df       	rcall	.-160    	; 0x11a <UART3_Receive>
+ 1ba:	f8 01       	movw	r30, r16
+ 1bc:	81 93       	st	Z+, r24
+ 1be:	8f 01       	movw	r16, r30
+		UART3_Transmit(buf_to_send[i]);
+	}
+
+	//get the answer (UART3) from XIMC  (struct Request_Gpos [26 bytes])
+	//uint8_t buf_to_read[26];
+	for (int i = 0; i < 26; i++)
+ 1c0:	ea 15       	cp	r30, r10
+ 1c2:	fb 05       	cpc	r31, r11
+ 1c4:	c9 f7       	brne	.-14     	; 0x1b8 <Command_Gpos+0x44>
+	}
+
+	//transmit the answer back (UART0)
+	for (int i = 0; i < 26; i++)
+	{
+		UART0_Transmit(buf_to_read[i]);
+ 1c6:	f7 01       	movw	r30, r14
+ 1c8:	81 91       	ld	r24, Z+
+ 1ca:	7f 01       	movw	r14, r30
+ 1cc:	96 df       	rcall	.-212    	; 0xfa <UART0_Transmit>
+		buf_to_read[i]=(uint8_t)UART3_Receive();
+		//UART0_Transmit((uint8_t)UART3_Receive());
+	}
+
+	//transmit the answer back (UART0)
+	for (int i = 0; i < 26; i++)
+ 1ce:	ae 14       	cp	r10, r14
+ 1d0:	bf 04       	cpc	r11, r15
+ 1d2:	c9 f7       	brne	.-14     	; 0x1c6 <Command_Gpos+0x52>
+	{
+		UART0_Transmit(buf_to_read[i]);
+	}
+
+	return buf_to_read;
+}
+ 1d4:	c6 01       	movw	r24, r12
+ 1d6:	df 91       	pop	r29
+ 1d8:	cf 91       	pop	r28
+ 1da:	1f 91       	pop	r17
+ 1dc:	0f 91       	pop	r16
+ 1de:	ff 90       	pop	r15
+ 1e0:	ef 90       	pop	r14
+ 1e2:	df 90       	pop	r13
+ 1e4:	cf 90       	pop	r12
+ 1e6:	bf 90       	pop	r11
+ 1e8:	af 90       	pop	r10
+ 1ea:	08 95       	ret
+
+000001ec <main>:
+}
+
+
+
+int main(void)
+{
+ 1ec:	cf 93       	push	r28
+ 1ee:	df 93       	push	r29
+ 1f0:	cd b7       	in	r28, 0x3d	; 61
+ 1f2:	de b7       	in	r29, 0x3e	; 62
+ 1f4:	c8 55       	subi	r28, 0x58	; 88
+ 1f6:	d1 09       	sbc	r29, r1
+ 1f8:	0f b6       	in	r0, 0x3f	; 63
+ 1fa:	f8 94       	cli
+ 1fc:	de bf       	out	0x3e, r29	; 62
+ 1fe:	0f be       	out	0x3f, r0	; 63
+ 200:	cd bf       	out	0x3d, r28	; 61
+};
+
+//UART3 and UART0 initializing
+static void UARTInit(void)
+{
+	UCSR3A = 0; //double speed mode is off
+ 202:	10 92 30 01 	sts	0x0130, r1	; 0x800130 <__TEXT_REGION_LENGTH__+0x700130>
+	UCSR3B = (1 << RXEN3)|(1 << TXEN3); //permitting receive interrupts, receiving and transmission
+ 206:	28 e1       	ldi	r18, 0x18	; 24
+ 208:	20 93 31 01 	sts	0x0131, r18	; 0x800131 <__TEXT_REGION_LENGTH__+0x700131>
+	UCSR3C = (1 << UCSZ31)|(1 << UCSZ30)|(1 << USBS3); //8 bits, non-parity, 2 stop bite
+ 20c:	9e e0       	ldi	r25, 0x0E	; 14
+ 20e:	90 93 32 01 	sts	0x0132, r25	; 0x800132 <__TEXT_REGION_LENGTH__+0x700132>
+	UBRR3H = 0;
+ 212:	10 92 35 01 	sts	0x0135, r1	; 0x800135 <__TEXT_REGION_LENGTH__+0x700135>
+	UBRR3L = 8; //baud rate 115200 bps
+ 216:	88 e0       	ldi	r24, 0x08	; 8
+ 218:	80 93 34 01 	sts	0x0134, r24	; 0x800134 <__TEXT_REGION_LENGTH__+0x700134>
+
+	UCSR0A = 0; //double speed mode is off
+ 21c:	10 92 c0 00 	sts	0x00C0, r1	; 0x8000c0 <__TEXT_REGION_LENGTH__+0x7000c0>
+	UCSR0B = (1 << RXEN0)|(1 << TXEN0); //permitting receive interrupts, receiving and transmission
+ 220:	20 93 c1 00 	sts	0x00C1, r18	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7000c1>
+	UCSR0C = (1 << UCSZ01)|(1 << UCSZ00)|(1 << USBS0); //8 bits, non-parity, 2 stop bite
+ 224:	90 93 c2 00 	sts	0x00C2, r25	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7000c2>
+	UBRR0H = 0;
+ 228:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7000c5>
+	UBRR0L = 8; //baud rate 115200 bps
+ 22c:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7000c4>
+int main(void)
+{
+	//Initializing UART
+	UARTInit();
+
+	uint8_t cmd_move[4] = { 'm', 'o', 'v', 'e' };
+ 230:	0f 2e       	mov	r0, r31
+ 232:	ff e6       	ldi	r31, 0x6F	; 111
+ 234:	7f 2e       	mov	r7, r31
+ 236:	f0 2d       	mov	r31, r0
+ 238:	0f 2e       	mov	r0, r31
+ 23a:	f5 e6       	ldi	r31, 0x65	; 101
+ 23c:	6f 2e       	mov	r6, r31
+ 23e:	f0 2d       	mov	r31, r0
+	uint8_t cmd_gpos[4] = { 'g', 'p', 'o', 's' };
+ 240:	87 e6       	ldi	r24, 0x67	; 103
+	uint8_t buf_to_read[26];
+
+	//Define the structure to send (command "gpos")
+	struct Request_Gpos gpos;
+	memcpy((void *)&gpos.CMD, (const void *)cmd_gpos, 4);
+ 242:	8b 8f       	std	Y+27, r24	; 0x1b
+ 244:	80 e7       	ldi	r24, 0x70	; 112
+ 246:	8c 8f       	std	Y+28, r24	; 0x1c
+ 248:	7d 8e       	std	Y+29, r7	; 0x1d
+ 24a:	83 e7       	ldi	r24, 0x73	; 115
+ 24c:	8e 8f       	std	Y+30, r24	; 0x1e
+
+	//take the answer from the command "gpos" and put it in the array
+	memcpy((void *)&buf_to_read, (const void *)Command_Gpos(gpos, buf_to_read), 26);
+ 24e:	1f 8e       	std	Y+31, r1	; 0x1f
+ 250:	18 a2       	std	Y+32, r1	; 0x20
+ 252:	19 a2       	std	Y+33, r1	; 0x21
+ 254:	1a a2       	std	Y+34, r1	; 0x22
+ 256:	1c a2       	std	Y+36, r1	; 0x24
+ 258:	1b a2       	std	Y+35, r1	; 0x23
+ 25a:	8e 01       	movw	r16, r28
+ 25c:	0f 5f       	subi	r16, 0xFF	; 255
+ 25e:	1f 4f       	sbci	r17, 0xFF	; 255
+ 260:	1f 93       	push	r17
+ 262:	0f 93       	push	r16
+ 264:	8d b7       	in	r24, 0x3d	; 61
+ 266:	9e b7       	in	r25, 0x3e	; 62
+ 268:	4a 97       	sbiw	r24, 0x1a	; 26
+ 26a:	0f b6       	in	r0, 0x3f	; 63
+ 26c:	f8 94       	cli
+ 26e:	9e bf       	out	0x3e, r25	; 62
+ 270:	0f be       	out	0x3f, r0	; 63
+ 272:	8d bf       	out	0x3d, r24	; 61
+ 274:	ad b7       	in	r26, 0x3d	; 61
+ 276:	be b7       	in	r27, 0x3e	; 62
+ 278:	11 96       	adiw	r26, 0x01	; 1
+ 27a:	8a e1       	ldi	r24, 0x1A	; 26
+ 27c:	fe 01       	movw	r30, r28
+ 27e:	7b 96       	adiw	r30, 0x1b	; 27
+ 280:	01 90       	ld	r0, Z+
+ 282:	0d 92       	st	X+, r0
+ 284:	8a 95       	dec	r24
+ 286:	e1 f7       	brne	.-8      	; 0x280 <main+0x94>
+ 288:	75 df       	rcall	.-278    	; 0x174 <Command_Gpos>
+ 28a:	fc 01       	movw	r30, r24
+ 28c:	9a e1       	ldi	r25, 0x1A	; 26
+ 28e:	d8 01       	movw	r26, r16
+ 290:	01 90       	ld	r0, Z+
+ 292:	0d 92       	st	X+, r0
+ 294:	9a 95       	dec	r25
+ 296:	e1 f7       	brne	.-8      	; 0x290 <main+0xa4>
+
+	//make the structure "gpos" from array
+	memcpy((void *)&gpos.Position, (const void *)&buf_to_read[4], 4);
+ 298:	8d 80       	ldd	r8, Y+5	; 0x05
+ 29a:	9e 80       	ldd	r9, Y+6	; 0x06
+ 29c:	af 80       	ldd	r10, Y+7	; 0x07
+ 29e:	b8 84       	ldd	r11, Y+8	; 0x08
+	memcpy((void *)&gpos.uPosition, (const void *)&buf_to_read[8], 2);
+ 2a0:	c9 84       	ldd	r12, Y+9	; 0x09
+ 2a2:	da 84       	ldd	r13, Y+10	; 0x0a
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 2a4:	9f ef       	ldi	r25, 0xFF	; 255
+ 2a6:	a3 ed       	ldi	r26, 0xD3	; 211
+ 2a8:	b0 e3       	ldi	r27, 0x30	; 48
+ 2aa:	91 50       	subi	r25, 0x01	; 1
+ 2ac:	a0 40       	sbci	r26, 0x00	; 0
+ 2ae:	b0 40       	sbci	r27, 0x00	; 0
+ 2b0:	e1 f7       	brne	.-8      	; 0x2aa <main+0xbe>
+ 2b2:	00 c0       	rjmp	.+0      	; 0x2b4 <main+0xc8>
+ 2b4:	00 00       	nop
+}
+
+//Sending the command 'left' to the UART0
+static void Command_Left(void)
+{
+	uint8_t buf_to_send[4] = { 'l', 'e', 'f', 't' };
+ 2b6:	8c e6       	ldi	r24, 0x6C	; 108
+ 2b8:	28 96       	adiw	r28, 0x08	; 8
+ 2ba:	8f af       	std	Y+63, r24	; 0x3f
+ 2bc:	28 97       	sbiw	r28, 0x08	; 8
+ 2be:	29 96       	adiw	r28, 0x09	; 9
+ 2c0:	6f ae       	std	Y+63, r6	; 0x3f
+ 2c2:	29 97       	sbiw	r28, 0x09	; 9
+ 2c4:	86 e6       	ldi	r24, 0x66	; 102
+ 2c6:	2a 96       	adiw	r28, 0x0a	; 10
+ 2c8:	8f af       	std	Y+63, r24	; 0x3f
+ 2ca:	2a 97       	sbiw	r28, 0x0a	; 10
+ 2cc:	84 e7       	ldi	r24, 0x74	; 116
+ 2ce:	2b 96       	adiw	r28, 0x0b	; 11
+ 2d0:	8f af       	std	Y+63, r24	; 0x3f
+ 2d2:	2b 97       	sbiw	r28, 0x0b	; 11
+ 2d4:	fe 01       	movw	r30, r28
+ 2d6:	e9 5b       	subi	r30, 0xB9	; 185
+ 2d8:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2da:	7f 01       	movw	r14, r30
+ 2dc:	8f 01       	movw	r16, r30
+ 2de:	0c 5f       	subi	r16, 0xFC	; 252
+ 2e0:	1f 4f       	sbci	r17, 0xFF	; 255
+ 2e2:	0f b6       	in	r0, 0x3f	; 63
+ 2e4:	f8 94       	cli
+ 2e6:	de bf       	out	0x3e, r29	; 62
+ 2e8:	0f be       	out	0x3f, r0	; 63
+ 2ea:	cd bf       	out	0x3d, r28	; 61
+
+	//transmit command "left" (UART3) [4 bytes]
+	for (int i = 0; i < 4; i++)
+	{
+		UART3_Transmit(buf_to_send[i]);
+ 2ec:	d7 01       	movw	r26, r14
+ 2ee:	8d 91       	ld	r24, X+
+ 2f0:	7d 01       	movw	r14, r26
+ 2f2:	0b df       	rcall	.-490    	; 0x10a <UART3_Transmit>
+static void Command_Left(void)
+{
+	uint8_t buf_to_send[4] = { 'l', 'e', 'f', 't' };
+
+	//transmit command "left" (UART3) [4 bytes]
+	for (int i = 0; i < 4; i++)
+ 2f4:	0e 15       	cp	r16, r14
+ 2f6:	1f 05       	cpc	r17, r15
+ 2f8:	c9 f7       	brne	.-14     	; 0x2ec <main+0x100>
+ 2fa:	04 e0       	ldi	r16, 0x04	; 4
+	}
+
+	//transmit (UART0) the answer from XIMC (UART3) ('left' [4 bytes])
+	for (int i = 0; i < 4; i++)
+	{
+		UART0_Transmit((uint8_t)UART3_Receive());
+ 2fc:	10 e0       	ldi	r17, 0x00	; 0
+ 2fe:	0d df       	rcall	.-486    	; 0x11a <UART3_Receive>
+ 300:	fc de       	rcall	.-520    	; 0xfa <UART0_Transmit>
+ 302:	01 50       	subi	r16, 0x01	; 1
+ 304:	11 09       	sbc	r17, r1
+ 306:	d9 f7       	brne	.-10     	; 0x2fe <main+0x112>
+	{
+		UART3_Transmit(buf_to_send[i]);
+	}
+
+	//transmit (UART0) the answer from XIMC (UART3) ('left' [4 bytes])
+	for (int i = 0; i < 4; i++)
+ 308:	bf ef       	ldi	r27, 0xFF	; 255
+ 30a:	ed e3       	ldi	r30, 0x3D	; 61
+ 30c:	f9 e4       	ldi	r31, 0x49	; 73
+ 30e:	b1 50       	subi	r27, 0x01	; 1
+ 310:	e0 40       	sbci	r30, 0x00	; 0
+ 312:	f0 40       	sbci	r31, 0x00	; 0
+ 314:	e1 f7       	brne	.-8      	; 0x30e <main+0x122>
+ 316:	00 c0       	rjmp	.+0      	; 0x318 <main+0x12c>
+ 318:	00 00       	nop
+ 31a:	83 e7       	ldi	r24, 0x73	; 115
+}
+
+//Sending the command 'stop' to the UART0
+static void Command_Stop(void)
+{
+	uint8_t buf_to_send[4] = { 's', 't', 'o', 'p' };
+ 31c:	28 96       	adiw	r28, 0x08	; 8
+ 31e:	8f af       	std	Y+63, r24	; 0x3f
+ 320:	28 97       	sbiw	r28, 0x08	; 8
+ 322:	84 e7       	ldi	r24, 0x74	; 116
+ 324:	29 96       	adiw	r28, 0x09	; 9
+ 326:	8f af       	std	Y+63, r24	; 0x3f
+ 328:	29 97       	sbiw	r28, 0x09	; 9
+ 32a:	8f e6       	ldi	r24, 0x6F	; 111
+ 32c:	2a 96       	adiw	r28, 0x0a	; 10
+ 32e:	8f af       	std	Y+63, r24	; 0x3f
+ 330:	2a 97       	sbiw	r28, 0x0a	; 10
+ 332:	80 e7       	ldi	r24, 0x70	; 112
+ 334:	2b 96       	adiw	r28, 0x0b	; 11
+ 336:	8f af       	std	Y+63, r24	; 0x3f
+ 338:	2b 97       	sbiw	r28, 0x0b	; 11
+ 33a:	ce 01       	movw	r24, r28
+ 33c:	89 5b       	subi	r24, 0xB9	; 185
+ 33e:	9f 4f       	sbci	r25, 0xFF	; 255
+ 340:	7c 01       	movw	r14, r24
+ 342:	8c 01       	movw	r16, r24
+ 344:	0c 5f       	subi	r16, 0xFC	; 252
+ 346:	1f 4f       	sbci	r17, 0xFF	; 255
+
+	//transmit command "stop" (UART3) [4 bytes]
+	for (int i = 0; i < 4; i++)
+	{
+		UART3_Transmit(buf_to_send[i]);
+ 348:	d7 01       	movw	r26, r14
+ 34a:	8d 91       	ld	r24, X+
+ 34c:	7d 01       	movw	r14, r26
+ 34e:	dd de       	rcall	.-582    	; 0x10a <UART3_Transmit>
+ 350:	0e 15       	cp	r16, r14
+static void Command_Stop(void)
+{
+	uint8_t buf_to_send[4] = { 's', 't', 'o', 'p' };
+
+	//transmit command "stop" (UART3) [4 bytes]
+	for (int i = 0; i < 4; i++)
+ 352:	1f 05       	cpc	r17, r15
+ 354:	c9 f7       	brne	.-14     	; 0x348 <main+0x15c>
+ 356:	04 e0       	ldi	r16, 0x04	; 4
+	}
+
+	//transmit (UART0) the answer from XIMC (UART3) ('stop' [4 bytes])
+	for (int i = 0; i < 4; i++)
+	{
+		UART0_Transmit((uint8_t)UART3_Receive());
+ 358:	10 e0       	ldi	r17, 0x00	; 0
+ 35a:	df de       	rcall	.-578    	; 0x11a <UART3_Receive>
+ 35c:	ce de       	rcall	.-612    	; 0xfa <UART0_Transmit>
+ 35e:	01 50       	subi	r16, 0x01	; 1
+ 360:	11 09       	sbc	r17, r1
+	{
+		UART3_Transmit(buf_to_send[i]);
+	}
+
+	//transmit (UART0) the answer from XIMC (UART3) ('stop' [4 bytes])
+	for (int i = 0; i < 4; i++)
+ 362:	d9 f7       	brne	.-10     	; 0x35a <main+0x16e>
+ 364:	18 c0       	rjmp	.+48     	; 0x396 <main+0x1aa>
+	uint8_t *buf_to_send = (uint8_t *)&move; //make the array from structure 'move' for transmitting
+
+	//transmit command "move" (UART3) [18 bytes]
+	for (int i = 0; i < sizeof(struct Request_Move); i++)
+	{
+		UART3_Transmit(buf_to_send[i]);
+ 366:	f7 01       	movw	r30, r14
+ 368:	81 91       	ld	r24, Z+
+ 36a:	7f 01       	movw	r14, r30
+static void Command_Move(struct Request_Move move)
+{
+	uint8_t *buf_to_send = (uint8_t *)&move; //make the array from structure 'move' for transmitting
+
+	//transmit command "move" (UART3) [18 bytes]
+	for (int i = 0; i < sizeof(struct Request_Move); i++)
+ 36c:	ce de       	rcall	.-612    	; 0x10a <UART3_Transmit>
+ 36e:	e0 16       	cp	r14, r16
+ 370:	f1 06       	cpc	r15, r17
+ 372:	c9 f7       	brne	.-14     	; 0x366 <main+0x17a>
+ 374:	04 e0       	ldi	r16, 0x04	; 4
+
+	//transmit (UART0) the answer (UART3) from XIMC  ('move' [4 bytes])
+	for (int i = 0; i < 4; i++)
+	{
+		//buf_to_read[i]=(uint8_t)UART_Receive();
+		UART0_Transmit((uint8_t)UART3_Receive());
+ 376:	10 e0       	ldi	r17, 0x00	; 0
+ 378:	d0 de       	rcall	.-608    	; 0x11a <UART3_Receive>
+ 37a:	bf de       	rcall	.-642    	; 0xfa <UART0_Transmit>
+ 37c:	01 50       	subi	r16, 0x01	; 1
+ 37e:	11 09       	sbc	r17, r1
+ 380:	d9 f7       	brne	.-10     	; 0x378 <main+0x18c>
+	{
+		UART3_Transmit(buf_to_send[i]);
+	}
+
+	//transmit (UART0) the answer (UART3) from XIMC  ('move' [4 bytes])
+	for (int i = 0; i < 4; i++)
+ 382:	ff ef       	ldi	r31, 0xFF	; 255
+ 384:	23 ed       	ldi	r18, 0xD3	; 211
+ 386:	80 e3       	ldi	r24, 0x30	; 48
+ 388:	f1 50       	subi	r31, 0x01	; 1
+ 38a:	20 40       	sbci	r18, 0x00	; 0
+ 38c:	80 40       	sbci	r24, 0x00	; 0
+ 38e:	e1 f7       	brne	.-8      	; 0x388 <main+0x19c>
+ 390:	00 c0       	rjmp	.+0      	; 0x392 <main+0x1a6>
+ 392:	00 00       	nop
+ 394:	ff cf       	rjmp	.-2      	; 0x394 <main+0x1a8>
+ 396:	9f ef       	ldi	r25, 0xFF	; 255
+ 398:	a3 ed       	ldi	r26, 0xD3	; 211
+ 39a:	b0 e3       	ldi	r27, 0x30	; 48
+ 39c:	91 50       	subi	r25, 0x01	; 1
+ 39e:	a0 40       	sbci	r26, 0x00	; 0
+ 3a0:	b0 40       	sbci	r27, 0x00	; 0
+ 3a2:	e1 f7       	brne	.-8      	; 0x39c <main+0x1b0>
+ 3a4:	00 c0       	rjmp	.+0      	; 0x3a6 <main+0x1ba>
+ 3a6:	00 00       	nop
+ 3a8:	8d e6       	ldi	r24, 0x6D	; 109
+	Command_Stop();
+	_delay_ms(2000);
+
+	//Define the structure to send command 'move'
+	struct Request_Move move;
+	memcpy((void *)&move.CMD, (const void *)cmd_move, 4);  //command 'move'
+ 3aa:	8d ab       	std	Y+53, r24	; 0x35
+ 3ac:	7e aa       	std	Y+54, r7	; 0x36
+ 3ae:	86 e7       	ldi	r24, 0x76	; 118
+ 3b0:	8f ab       	std	Y+55, r24	; 0x37
+ 3b2:	68 ae       	std	Y+56, r6	; 0x38
+ 3b4:	89 ae       	std	Y+57, r8	; 0x39
+	move.Position = gpos.Position; //Position
+ 3b6:	9a ae       	std	Y+58, r9	; 0x3a
+ 3b8:	ab ae       	std	Y+59, r10	; 0x3b
+ 3ba:	bc ae       	std	Y+60, r11	; 0x3c
+ 3bc:	de ae       	std	Y+62, r13	; 0x3e
+	move.uPosition = gpos.uPosition; //u Position (-255 ... +255)
+ 3be:	cd ae       	std	Y+61, r12	; 0x3d
+ 3c0:	fe 01       	movw	r30, r28
+	memset((void *)move.Reserved, 0, 6);
+ 3c2:	ff 96       	adiw	r30, 0x3f	; 63
+ 3c4:	86 e0       	ldi	r24, 0x06	; 6
+ 3c6:	df 01       	movw	r26, r30
+ 3c8:	1d 92       	st	X+, r1
+ 3ca:	8a 95       	dec	r24
+ 3cc:	e9 f7       	brne	.-6      	; 0x3c8 <main+0x1dc>
+
+	
+	uint8_t *pbuf1 = (uint8_t *)&move;//make array from structure to send
+
+	move.CRC = CRC16(pbuf1, 12); //calculate check sum
+ 3ce:	6c e0       	ldi	r22, 0x0C	; 12
+ 3d0:	70 e0       	ldi	r23, 0x00	; 0
+ 3d2:	ce 01       	movw	r24, r28
+ 3d4:	c5 96       	adiw	r24, 0x35	; 53
+ 3d6:	a9 de       	rcall	.-686    	; 0x12a <CRC16>
+ 3d8:	27 96       	adiw	r28, 0x07	; 7
+ 3da:	9f af       	std	Y+63, r25	; 0x3f
+ 3dc:	8e af       	std	Y+62, r24	; 0x3e
+ 3de:	27 97       	sbiw	r28, 0x07	; 7
+ 3e0:	82 e1       	ldi	r24, 0x12	; 18
+ 3e2:	fe 01       	movw	r30, r28
+ 3e4:	f5 96       	adiw	r30, 0x35	; 53
+ 3e6:	de 01       	movw	r26, r28
+ 3e8:	a9 5b       	subi	r26, 0xB9	; 185
+ 3ea:	bf 4f       	sbci	r27, 0xFF	; 255
+ 3ec:	01 90       	ld	r0, Z+
+ 3ee:	0d 92       	st	X+, r0
+ 3f0:	8a 95       	dec	r24
+ 3f2:	e1 f7       	brne	.-8      	; 0x3ec <main+0x200>
+ 3f4:	fe 01       	movw	r30, r28
+ 3f6:	e9 5b       	subi	r30, 0xB9	; 185
+ 3f8:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3fa:	7f 01       	movw	r14, r30
+ 3fc:	8f 01       	movw	r16, r30
+ 3fe:	0e 5e       	subi	r16, 0xEE	; 238
+ 400:	1f 4f       	sbci	r17, 0xFF	; 255
+ 402:	b1 cf       	rjmp	.-158    	; 0x366 <main+0x17a>
+
+00000404 <_exit>:
+ 404:	f8 94       	cli
+
+00000406 <__stop_program>:
+ 406:	ff cf       	rjmp	.-2      	; 0x406 <__stop_program>
